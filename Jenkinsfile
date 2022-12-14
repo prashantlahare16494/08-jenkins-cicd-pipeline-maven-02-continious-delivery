@@ -7,9 +7,9 @@ pipeline{
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
         NEXUS_URL = "http://ec2-18-191-181-147.us-east-2.compute.amazonaws.com:8081"
-        NEXUS_REPOSITORY_SNAPSHOT = "mylocalrepo-snapshots"
-        NEXUS_REPOSITORY_RELEASE = "mylocalrepo-releases"
-        NEXUS_CREDENTIAL_ID = "nexus-user-credentials"    
+        NEXUS_REPOSITORY_SNAPSHOT = "maven-central-repository"
+        NEXUS_REPOSITORY_RELEASE = "maven-central-repository"
+        NEXUS_CREDENTIAL_ID = "NEXUS_CRED"    
     }
     
     stages{
