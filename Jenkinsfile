@@ -33,8 +33,8 @@ pipeline{
             steps{
                 echo "====++++  Static Code Analysis (SonarQube) ++++===="
                 withSonarQubeEnv('my_sonarqube_in_docker') {  
-                //   sh "mvn clean verify -DskipITs=true sonar:sonar -Dsonar.host.url=http://ec2-18-224-66-40.us-east-2.compute.amazonaws.com:9000   -Dsonar.projectName=08-jenkins-cicd-pipeline-maven-01-continious-integration -Dsonar.projectKey=08-jenkins-cicd-pipeline-maven-01-continious-integration -Dsonar.projectVersion=$BUILD_NUMBER";
-                    sh "mvn clean package clean package -Dsurefire.skip=true sonar:sonar -Dsonar.host.url=http://ec2-18-224-66-40.us-east-2.compute.amazonaws.com:9000   -Dsonar.projectName=08-jenkins-cicd-pipeline-maven-02-continious-delivery -Dsonar.projectKey=08-jenkins-cicd-pipeline-maven-02-continious-delivery -Dsonar.projectVersion=$BUILD_NUMBER";
+                //   sh "mvn clean verify -DskipITs=true sonar:sonar -Dsonar.host.url=http://ec2-3-133-96-184.us-east-2.compute.amazonaws.com:9000   -Dsonar.projectName=08-jenkins-cicd-pipeline-maven-01-continious-integration -Dsonar.projectKey=08-jenkins-cicd-pipeline-maven-01-continious-integration -Dsonar.projectVersion=$BUILD_NUMBER";
+                    sh "mvn clean package clean package -Dsurefire.skip=true sonar:sonar -Dsonar.host.url=http://ec2-3-133-96-184.us-east-2.compute.amazonaws.com:9000   -Dsonar.projectName=08-jenkins-cicd-pipeline-maven-02-continious-delivery -Dsonar.projectKey=08-jenkins-cicd-pipeline-maven-02-continious-delivery -Dsonar.projectVersion=$BUILD_NUMBER";
                }  
             }           
         }
