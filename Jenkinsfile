@@ -115,13 +115,13 @@ pipeline{
             }
 	    }
         // Do performance tests on the app
-	    stage('Do the Performance Testing'){	   	   
-	   	    steps {  
-               echo "====++++ Do the performance tests Against the Staging Server ++++===="        
-               sh "mvn clean verify"   // This triggers JMeter Performance Analysis and generates results in target/jmeter/results          
-               sh "ls ${WORKSPACE}/target/jmeter/results"
-         	}
-	    }
+	//    stage('Do the Performance Testing'){	   	   
+	//   	    steps {  
+        //       echo "====++++ Do the performance tests Against the Staging Server ++++===="        
+        //       sh "mvn clean verify"   // This triggers JMeter Performance Analysis and generates results in target/jmeter/results          
+        //       sh "ls ${WORKSPACE}/target/jmeter/results"
+        // 	}
+	//    }
         // Publish the test reports
 	    stage ('Publish the performance reports') {
 	        steps {
